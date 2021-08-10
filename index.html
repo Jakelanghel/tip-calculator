@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-center">
+        <header>
+            <img class="logo" src="images/logo.svg" alt="SPLITTER">
+        </header>
+    
+        <main role="main">
+
+            <div class="container-bill">
+                <div class="flex-col">
+                    <label for="bill-input" class="input-label">Bill</label>
+                    <input type="number" class="input bill-input" id="bill-input-id" placeholder="0">
+                </div>
+            </div>
+
+            <div class="container-tip">
+
+                <div class="flex-col">
+
+                    <label  class="input-label tip-label" for="tip-btns">Select Tip % </label>
+                    
+                    <div class="flex">
+                        <input type="button" class="tip-percent-btn" id="tip-btn-5-percent" value="5%">
+                        <input type="button" class="tip-percent-btn" id="tip-btn-10-percent" value="10%">
+                    </div>
+                    
+                    <div class="flex">
+                        <input type="button" class="tip-percent-btn" id="tip-btn-15-percent" value="15%">
+                        <input type="button" class="tip-percent-btn" id="tip-btn-25-percent" value="25%">
+                    </div>
+                    
+                    <div class="flex">
+                        <input type="button" class="tip-percent-btn" id="tip-btn-50-percent" value="50%">
+                    <input type="button" class="tip-percent-btn custom-btn" id="tip-btn-custom" value="custom">
+                    
+                </div>
+            </div>
+
+                <div class="container-btns">
+                    
+                </div>
+                
+            </div>
+
+            <div class="container-group">
+                <label for="">Number of People</label>
+                <input type="number" class="input-group" id="input-group-id" placeholder="0">
+            </div>
+            
+            <div class="container-output">
+                <div class="tip-amount">
+                    <div class="tip-amount-right">
+                        <h4 class="tip-amount-title">Tip Amount</h4>
+                        <p class="tip-amount-p">/ person</p>
+                    </div>
+                    <div class="tip-amount-left">
+                        <h2 class="tip-amount" id="tip-amount-id">0</h2>
+                    </div>
+                    <button class="reset-btn">RESET</button>
+                    
+                </div>
+            </div>
+                                          
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+:root {
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan1: hsl(186, 14%, 43%);
+    --dark-grayish-cyan2: hsl(184, 14%, 56%);
+    --light-grayish-cyan1: hsl(185, 41%, 84%);
+    --light-grayish-cyan2: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* \- Mobile: 375px */
+
+/* =============== */
+/* TYPOGRAPHY */
+/* =============== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;    font-weight: 700;
+}
+
+.input {
+    text-align: right;
+    font-size: 24px;
+    font-weight: 700;
+    padding: .5em;
+    border: none;
+    background: var(--light-grayish-cyan2);
+    border-radius: 10px;
+    outline: none;
+    border: solid 1px var(--light-grayish-cyan1)
+}
+
+.input-label {
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.bill-input {
+    color: var(--very-dark-cyan);
+}
+
+
+
+/* =============== */
+/* LAYOUT */
+/* =============== */
+
+.container-center {
+    width: 100%;
+    margin: 0 auto;
+    background: var(--light-grayish-cyan1);
+}
+
+.flex-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+/* =============== */
+/* HEADER */
+/* =============== */
+
+header {
+    text-align: center;
+}
+
+.logo {
+    padding: 1.5em 0;
+}
+
+
+/* =============== */
+/* MAIN */
+/* =============== */
+
+main {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 2em;
+    background: var(--White);
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+/* =============== */
+/* TIPS */
+/* =============== */
+
+.container-tip {
+    margin-top: 2em;
+}
+
+.tip-percent-btn {
+    width: 48%;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--light-grayish-cyan2);
+    font-family: 'Space Mono', monospace;
+    background: var(--very-dark-cyan);
+    padding: .5em 1em;
+    margin-bottom: .5em;
+    border: none;
+    border-radius: 5px;
+}
+
+.custom-btn {
+    text-transform: capitalize;
+    color: var(--dark-grayish-cyan2);
+    background: var(--light-grayish-cyan2);
+    border: solid 1px var(--light-grayish-cyan1)
+}
+
+
+
+
+
