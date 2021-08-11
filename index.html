@@ -6,74 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <div class="container-center">
         <header>
-            <img class="logo" src="images/logo.svg" alt="SPLITTER">
+            <img src="images/logo.svg" alt="splitter">
         </header>
-    
-        <main role="main">
 
-            <div class="container-bill">
+        <main>
+            <section class="bill flex-col">
+                <label for="bill-input" class="input-label">Bill</label>
+                <input type="number" class="input bill-input" placeholder="0">
+            </section>
+
+            <section class="container">
                 <div class="flex-col">
-                    <label for="bill-input" class="input-label">Bill</label>
-                    <input type="number" class="input bill-input" id="bill-input-id" placeholder="0">
-                </div>
-            </div>
-
-            <div class="container-tip">
-
-                <div class="flex-col">
-
                     <label  class="input-label tip-label" for="tip-btns">Select Tip % </label>
                     
-                    <div class="flex">
+                    <div class="btn-container">
                         <input type="button" class="tip-percent-btn" id="tip-btn-5-percent" value="5%">
                         <input type="button" class="tip-percent-btn" id="tip-btn-10-percent" value="10%">
                     </div>
-                    
-                    <div class="flex">
+
+                    <div class="btn-container">
                         <input type="button" class="tip-percent-btn" id="tip-btn-15-percent" value="15%">
                         <input type="button" class="tip-percent-btn" id="tip-btn-25-percent" value="25%">
                     </div>
                     
-                    <div class="flex">
+                    <div class="btn-container">
                         <input type="button" class="tip-percent-btn" id="tip-btn-50-percent" value="50%">
-                    <input type="button" class="tip-percent-btn custom-btn" id="tip-btn-custom" value="custom">
-                    
-                </div>
-            </div>
-
-                <div class="container-btns">
-                    
+                        <input type="button" class="tip-percent-btn custom-btn" id="tip-btn-custom" value="custom">
+                    </div>
                 </div>
                 
-            </div>
+            </section>
 
-            <div class="container-group">
-                <label for="">Number of People</label>
-                <input type="number" class="input-group" id="input-group-id" placeholder="0">
-            </div>
-            
-            <div class="container-output">
-                <div class="tip-amount">
-                    <div class="tip-amount-right">
-                        <h4 class="tip-amount-title">Tip Amount</h4>
-                        <p class="tip-amount-p">/ person</p>
+            <section class="container flex-col">
+                <label for="group-input" class="input-label">Number of People</label>
+                <input type="number" class="input group-input" placeholder="0">
+            </section>
+
+            <section class="container output">
+                <div class="tip-amount flex-col">
+                    <div class="tip-amount">
+                        <div class="flex">
+                            <div class="tip-info">
+                                <h4 class="output-title">Tip Amount</h4>
+                                <p class="person">/ person</p>
+                            </div>
+                            <div class="tip-amount">
+                                <h2 class="output-data" id="output-data-id">$0.00</h2>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tip-amount-left">
-                        <h2 class="tip-amount" id="tip-amount-id">0</h2>
+
+                    <div class="total-amount">
+                        <div class="flex">
+                            <div class="total-info">
+                                <h4 class="output-title">Total</h4>
+                                <p class="person">/ person</p>
+                            </div>
+                            <div class="total-amount">
+                                <h2 class="output-data" id="output-data-id">$0.00</h2>
+                            </div>
+                        </div>
                     </div>
                     <button class="reset-btn">RESET</button>
-                    
                 </div>
-            </div>
-                                          
+            </section>
         </main>
-    </div>
+    </div> 
 </body>
 </html>

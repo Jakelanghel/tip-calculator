@@ -1,4 +1,5 @@
 :root {
+    --strong-cyan: hsl(172, 67%, 45%);
     --very-dark-cyan: hsl(183, 100%, 15%);
     --dark-grayish-cyan1: hsl(186, 14%, 43%);
     --dark-grayish-cyan2: hsl(184, 14%, 56%);
@@ -7,49 +8,70 @@
     --White: hsl(0, 0%, 100%);
 }
 
-/* \- Mobile: 375px */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--light-grayish-cyan1);
+}
+
+header {
+    text-align: center;
+    padding: 1.5em 0;
+}
 
 /* =============== */
 /* TYPOGRAPHY */
 /* =============== */
 
 body {
+    font-family: 'Space Mono', monospace; 
+}
+
+h1,h2,h3,h4 {
     margin: 0;
-    padding: 0;
-    font-family: 'Space Mono', monospace;    font-weight: 700;
+}
+
+p {
+    margin: 0
 }
 
 .input {
-    text-align: right;
     font-size: 24px;
     font-weight: 700;
-    padding: .5em;
-    border: none;
+    color: var(--very-dark-cyan);
+    text-align: right;
+    padding: .25em .5em;
     background: var(--light-grayish-cyan2);
-    border-radius: 10px;
     outline: none;
-    border: solid 1px var(--light-grayish-cyan1)
+    border: solid 1px var(--light-grayish-cyan1);
+    border-radius: 10px;
 }
 
 .input-label {
     margin-bottom: 8px;
     font-weight: 400;
+    color: var(--dark-grayish-cyan1);
 }
-
-.bill-input {
-    color: var(--very-dark-cyan);
-}
-
 
 
 /* =============== */
 /* LAYOUT */
 /* =============== */
 
+.container {
+    margin-top: 1em;
+}
+
 .container-center {
-    width: 100%;
+    max-width: 375px;
     margin: 0 auto;
-    background: var(--light-grayish-cyan1);
+}
+
+.flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .flex-col {
@@ -58,44 +80,21 @@ body {
     flex-direction: column;
 }
 
-.flex {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-/* =============== */
-/* HEADER */
-/* =============== */
-
-header {
-    text-align: center;
-}
-
-.logo {
-    padding: 1.5em 0;
-}
-
-
 /* =============== */
 /* MAIN */
 /* =============== */
 
 main {
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 2em;
-    background: var(--White);
+    background: var(--light-grayish-cyan2);
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
+    padding: 2em;
 }
 
-/* =============== */
-/* TIPS */
-/* =============== */
 
-.container-tip {
-    margin-top: 2em;
-}
+/* =============== */
+/* BUTTONS */
+/* =============== */
 
 .tip-percent-btn {
     width: 48%;
@@ -115,10 +114,44 @@ main {
     text-transform: capitalize;
     color: var(--dark-grayish-cyan2);
     background: var(--light-grayish-cyan2);
-    border: solid 1px var(--light-grayish-cyan1)
+    border: solid 1px var(--light-grayish-cyan1);
 }
 
 
+/* =============== */
+/* OUTPUT */
+/* =============== */
 
+.output {
+    background: var(--very-dark-cyan);
+    padding: 2em 1.5em;
+    border-radius: 5%;
+}
 
+.output-title {
+    color: var(--light-grayish-cyan2)
+}
+
+.person {
+    color: var(--light-grayish-cyan1);
+    margin-bottom: 1.5em;
+}
+
+.output-data {
+    color: var(--strong-cyan);
+    margin-top: .75em;
+}
+
+.reset-btn {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--very-dark-cyan);
+    font-family: 'Space Mono', monospace;
+    background: var(--strong-cyan);
+    padding: .5em 1em;
+    border: none;
+    border-radius: 5px;
+}
 
