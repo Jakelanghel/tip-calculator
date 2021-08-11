@@ -17,38 +17,42 @@
         </header>
 
         <main>
-            <section class="bill flex-col">
-                <label for="bill-input" class="input-label">Bill</label>
-                <input type="number" class="input bill-input" placeholder="0">
-            </section>
+            <div class="container-desktop-col"> <!-- Container to create first columns in desktop layour-->
 
-            <section class="container">
-                <div class="flex-col">
-                    <label  class="input-label tip-label" for="tip-btns">Select Tip % </label>
-                    
-                    <div class="btn-container">
-                        <input type="button" class="tip-percent-btn" id="tip-btn-5-percent" value="5%">
-                        <input type="button" class="tip-percent-btn" id="tip-btn-10-percent" value="10%">
-                    </div>
+                <section class="bill flex-col">
+                    <label for="bill-input" class="input-label">Bill</label>
+                    <input type="number" class="input bill-input" placeholder="0">
+                </section>
 
-                    <div class="btn-container">
-                        <input type="button" class="tip-percent-btn" id="tip-btn-15-percent" value="15%">
-                        <input type="button" class="tip-percent-btn" id="tip-btn-25-percent" value="25%">
-                    </div>
-                    
-                    <div class="btn-container">
-                        <input type="button" class="tip-percent-btn" id="tip-btn-50-percent" value="50%">
-                        <input type="button" class="tip-percent-btn custom-btn" id="tip-btn-custom" value="custom">
-                    </div>
+                <section class="container">
+                    <div class="flex-col">
+                        <label  class="input-label tip-label" for="tip-btns">Select Tip % </label>
+                        
+                        <div class="btn-container">
+                            <input type="button" class="tip-percent-btn" id="tip-btn-5-percent" value="5%">
+                            <input type="button" class="tip-percent-btn" id="tip-btn-10-percent" value="10%">
+                        </div>
+
+                        <div class="btn-container">
+                            <input type="button" class="tip-percent-btn" id="tip-btn-15-percent" value="15%">
+                            <input type="button" class="tip-percent-btn" id="tip-btn-25-percent" value="25%">
+                        </div>
+                        
+                        <div class="btn-container">
+                            <input type="button" class="tip-percent-btn" id="tip-btn-50-percent" value="50%">
+                            <input type="button" class="tip-percent-btn custom-btn" id="tip-btn-custom" value="custom">
+                        </div>
                 </div>
                 
-            </section>
+            </section> 
 
             <section class="container flex-col">
                 <label for="group-input" class="input-label">Number of People</label>
                 <input type="number" class="input group-input" placeholder="0">
             </section>
+        </div> <!-- Close first desktop col-->
 
+        <div class="container-desktop-col"><!-- Container to create second columns in desktop layour-->
             <section class="container output">
                 <div class="tip-amount flex-col">
                     <div class="tip-amount">
@@ -64,7 +68,7 @@
                     </div>
 
                     <div class="total-amount">
-                        <div class="flex">
+                        <div class="flex mobile-total"> <!-- mobile-total class added to add margin-->
                             <div class="total-info">
                                 <h4 class="output-title">Total</h4>
                                 <p class="person">/ person</p>
@@ -77,6 +81,8 @@
                     <button class="reset-btn">RESET</button>
                 </div>
             </section>
+        </div> <!-- Close second desktop col-->
+            
         </main>
     </div> 
 </body>

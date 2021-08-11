@@ -86,8 +86,8 @@ p {
 
 main {
     background: var(--light-grayish-cyan2);
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
     padding: 2em;
 }
 
@@ -155,3 +155,59 @@ main {
     border-radius: 5px;
 }
 
+
+/* ============================== */
+/* =======  DESKTOP-CSS  ======== */
+/* ============================== */
+
+@media(min-width: 1440px ){
+
+   .container-center {
+       max-width: 750px;
+   }
+
+   .container-desktop-col {
+       width: 48%;
+   }
+
+   header {
+       padding: 8em 0 5em 0;
+   }
+
+   main {
+       display: flex;
+       border-radius: 5%;
+       justify-content: space-between;
+   }
+
+   .tip-info {
+       margin-top: 1em;
+   }
+
+   .reset-btn {
+       margin-top: 4.5em;
+   }
+
+   .output {
+       padding: 2em;
+   }
+
+   .output-data {
+       font-size: 32px;
+   }
+
+   .mobile-total {
+       margin-top: 2.5em;
+   }
+
+   .total-info {
+       margin-top: 1em;
+   }
+
+   .person {
+       margin: 0;
+   }
+   
+
+  
+}
