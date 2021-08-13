@@ -60,6 +60,7 @@ p {
 }
 
 
+
 /* =============== */
 /* LAYOUT */
 /* =============== */
@@ -163,9 +164,15 @@ input[type=number]{
     border-radius: 5px;
 }
 
-.tip-percent-btn:hover,
+.tip-percent-btn:hover {
+    background: var(--light-grayish-cyan1);
+    color: var(--very-dark-cyan);
+}
+
+.tip-percent-btn:active,
 .tip-percent-btn:focus {
-    background: var(--strong-cyan)
+    background: var(--strong-cyan);
+    color: var(--very-dark-cyan);
 }
 
 .custom-btn {
@@ -207,6 +214,11 @@ input[type=number]{
     padding: .5em 1em;
     border: none;
     border-radius: 5px;
+    margin-top: 1.5em;
+}
+
+.reset-btn:hover {
+    background: var(--light-grayish-cyan1);
 }
 
 .error {
@@ -226,7 +238,7 @@ input[type=number]{
 
 .output {
     background: var(--very-dark-cyan);
-    padding: 2em 1.5em;
+    padding: 2em 1.5em 1em 1.5em;
     border-radius: 5%;
 }
 
@@ -277,9 +289,8 @@ input[type=number]{
    }
 
    .custom-btn:focus {
-    width: 27%;
-    
-}
+        width: 27%;
+    }
 
     .error-text {
         margin-left: 5em;
@@ -289,9 +300,6 @@ input[type=number]{
        padding: 2em;
    }
 
-   .output-data {
-       font-size: 32px;
-   }
 
    .total-info {
        margin-top: 1em;

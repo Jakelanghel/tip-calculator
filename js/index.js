@@ -8,8 +8,10 @@ function addEvents() {
     const percentBtns = document.querySelectorAll("#tip-btn")
     const customBtn = document.getElementById("tip-btn-custom")
     const groupInput = document.getElementById("group-input-id")
+    const resetBtn = document.getElementById("reset-btn-id")
 
     groupInput.addEventListener("keyup", getGroupInput) // listen for group input
+    resetBtn.addEventListener("click", resetInputs)
 
     customBtn.addEventListener("keyup", getCustomInput) // listen for custom tip input
 
@@ -113,7 +115,7 @@ function getExactBill(billSplit) {
             billSplit = `$${billDollarAmount}.${billCents}`
             return billSplit
         }else {
-            billSplit = `$${billDollerAmount}.${billCents}0`
+            billSplit = `$${billDollarAmount}.${billCents}0`
             return billSplit
         }
         
@@ -122,6 +124,20 @@ function getExactBill(billSplit) {
         return billSplit
     }
 }
+
+function resetInputs() {
+    const billInput = document.getElementById("bill-input-id")
+    const groupInput = document.getElementById("group-input-id")
+    const tipOutput = document.getElementById("output-data-tip")
+    const totalOutput = document.getElementById("output-data-total")
+    
+    billInput.value = ""
+    groupInput.value = ""
+    tipOutput.textContent = "0.00"
+    totalOutput.textContent = "0.00"
+
+}
+
 
 
 
