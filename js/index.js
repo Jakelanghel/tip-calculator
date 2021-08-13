@@ -58,11 +58,11 @@ function checkInputs() {
     const groupDiv = document.getElementById("group-input-id")
     const errorText = document.querySelector(".error-text")
 
-    if(bill && numberOfPeople) { // check if bill and number of people have been filled out
+    if(bill && numberOfPeople > 0) { // check if bill and number of people have been filled out
         groupDiv.classList.remove("error")// remove error msg if present
         errorText.style.display = "none"
         return true
-    }else if(bill && !numberOfPeople) { // if number of people has not been filled out display error msg
+    }else if(!numberOfPeople || numberOfPeople === "0") { // if number of people has not been filled out display error msg
         groupDiv.classList.add("error")
         errorText.style.display = "inline"
         return false
