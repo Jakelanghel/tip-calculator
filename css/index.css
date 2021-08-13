@@ -6,6 +6,7 @@
     --light-grayish-cyan1: hsl(185, 41%, 84%);
     --light-grayish-cyan2: hsl(189, 41%, 97%);
     --White: hsl(0, 0%, 100%);
+    --error: #f08080;
 }
 
 html,
@@ -36,22 +37,26 @@ p {
     margin: 0
 }
 
-.input {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--very-dark-cyan);
-    text-align: right;
-    padding: .25em .5em;
-    background: var(--light-grayish-cyan2);
-    outline: none;
-    border: solid 1px var(--light-grayish-cyan1);
-    border-radius: 10px;
-}
+
 
 .input-label {
+    display: block;
     margin-bottom: 8px;
     font-weight: 400;
     color: var(--dark-grayish-cyan1);
+}
+
+
+.output-title {
+    color: var(--light-grayish-cyan2)
+}
+
+.output-subtitle {
+    color: var(--light-grayish-cyan1);
+}
+
+.output-data {
+    color: var(--strong-cyan);
 }
 
 
@@ -80,24 +85,72 @@ p {
     flex-direction: column;
 }
 
+.desktop-btn {
+    display: none;
+}
+
 /* =============== */
 /* MAIN */
 /* =============== */
 
 main {
-    background: var(--light-grayish-cyan2);
+    background: var(--White);
     border-top-left-radius: 8%;
     border-top-right-radius: 8%;
-    padding: 2em;
+    padding: 1.5em 2em;
 }
 
+/* =============== */
+/* INPUTS */
+/* =============== */
+
+.input {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--very-dark-cyan);
+    text-align: right;
+    padding: .5em;
+    background: var(--light-grayish-cyan2);
+    border: solid 2px var(--light-grayish-cyan2);
+    outline: none;
+    border-radius: 10px;
+}
+
+.input:focus {
+    border: solid 2px var(--strong-cyan);
+}
+
+.bill-input {
+    background:var(--light-grayish-cyan2) url("../images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: left;
+    
+}
+
+.group-input {
+    background:var(--light-grayish-cyan2) url("../images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: left;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
 
 /* =============== */
-/* BUTTONS */
+/* BUTTONS 
 /* =============== */
 
 .tip-percent-btn {
-    width: 48%;
+    width: 45%;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -110,36 +163,37 @@ main {
     border-radius: 5px;
 }
 
+.tip-percent-btn:hover,
+.tip-percent-btn:focus {
+    background: var(--strong-cyan)
+}
+
 .custom-btn {
+    width: 45%;
+    font-size: 1.25rem;
+    text-align: center;
     text-transform: capitalize;
+    padding: .5em 0;
     color: var(--dark-grayish-cyan2);
     background: var(--light-grayish-cyan2);
-    border: solid 1px var(--light-grayish-cyan1);
+    border: solid 2px var(--light-grayish-cyan2);
+    outline: none;
 }
 
-
-/* =============== */
-/* OUTPUT */
-/* =============== */
-
-.output {
-    background: var(--very-dark-cyan);
-    padding: 2em 1.5em;
-    border-radius: 5%;
+.custom-btn:hover,
+.custom-btn:focus {
+    border: solid 2px var(--strong-cyan);
+    background: var(--light-grayish-cyan2)
 }
 
-.output-title {
-    color: var(--light-grayish-cyan2)
+.custom-btn:focus {
+    width: 41%;
+    text-align: right;
+    padding-right: .5em
 }
 
-.person {
-    color: var(--light-grayish-cyan1);
-    margin-bottom: 1.5em;
-}
-
-.output-data {
-    color: var(--strong-cyan);
-    margin-top: .75em;
+.custom-btn:focus::placeholder {
+    color: transparent;
 }
 
 .reset-btn {
@@ -155,6 +209,36 @@ main {
     border-radius: 5px;
 }
 
+.error {
+    border: solid 2px lightcoral;
+}
+
+.error-text {
+    margin-left: 1em;
+    color: var(--error);
+    display: none;
+}
+
+
+/* =============== */
+/* OUTPUT */
+/* =============== */
+
+.output {
+    background: var(--very-dark-cyan);
+    padding: 2em 1.5em;
+    border-radius: 5%;
+}
+
+.total {
+    margin-top: 1.5em;
+}
+
+.output-data {
+    margin-top: .75em
+}
+
+
 
 /* ============================== */
 /* =======  DESKTOP-CSS  ======== */
@@ -163,7 +247,7 @@ main {
 @media(min-width: 1440px ){
 
    .container-center {
-       max-width: 750px;
+       max-width: 850px;
    }
 
    .container-desktop-col {
@@ -184,9 +268,22 @@ main {
        margin-top: 1em;
    }
 
+   .tip-percent-btn {
+       width: 30%;
+   }
+
    .reset-btn {
        margin-top: 4.5em;
    }
+
+   .custom-btn:focus {
+    width: 27%;
+    
+}
+
+    .error-text {
+        margin-left: 5em;
+    }
 
    .output {
        padding: 2em;
@@ -194,10 +291,6 @@ main {
 
    .output-data {
        font-size: 32px;
-   }
-
-   .mobile-total {
-       margin-top: 2.5em;
    }
 
    .total-info {

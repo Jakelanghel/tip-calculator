@@ -8,82 +8,72 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon-32x32.png"/>
     <title>Document</title>
 </head>
 <body>
-    <div class="container-center">
+    <div class="container-center"><!--Container to keep everything in the center of the page-->
         <header>
             <img src="images/logo.svg" alt="splitter">
         </header>
 
         <main>
-            <div class="container-desktop-col"> <!-- Container to create first columns in desktop layour-->
+            <div class="container-desktop-col"> <!-- Container to create first columns in desktop layout-->
 
-                <section class="bill flex-col">
+                <section class="flex-col container">
                     <label for="bill-input" class="input-label">Bill</label>
-                    <input type="number" class="input bill-input" placeholder="0">
+                    <input type="number" class="input bill-input" id="bill-input-id" placeholder="0">
                 </section>
 
                 <section class="container">
-                    <div class="flex-col">
                         <label  class="input-label tip-label" for="tip-btns">Select Tip % </label>
-                        
-                        <div class="btn-container">
-                            <input type="button" class="tip-percent-btn" id="tip-btn-5-percent" value="5%">
-                            <input type="button" class="tip-percent-btn" id="tip-btn-10-percent" value="10%">
-                        </div>
-
-                        <div class="btn-container">
-                            <input type="button" class="tip-percent-btn" id="tip-btn-15-percent" value="15%">
-                            <input type="button" class="tip-percent-btn" id="tip-btn-25-percent" value="25%">
-                        </div>
-                        
-                        <div class="btn-container">
-                            <input type="button" class="tip-percent-btn" id="tip-btn-50-percent" value="50%">
-                            <input type="button" class="tip-percent-btn custom-btn" id="tip-btn-custom" value="custom">
-                        </div>
-                </div>
+                        <input type="button" class="tip-percent-btn" id="tip-btn" value="5%">
+                        <input type="button" class="tip-percent-btn" id="tip-btn" value="10%">
+                        <input type="button" class="tip-percent-btn" id="tip-btn" value="15%">
+                        <input type="button" class="tip-percent-btn" id="tip-btn" value="25%">
+                        <input type="button" class="tip-percent-btn" id="tip-btn" value="50%">
+                        <input type="number" class="tip-percent-btn custom-btn" id="tip-btn-custom" placeholder="custom">
+                </section>
                 
-            </section> 
+                <section class="container flex-col">
+                    <label for="group-input" class="input-label">Number of People <span class="error-text">Can't be zero</span> </label>
+                    <input type="number" class="input group-input" id="group-input-id" placeholder="0">
+                </section>
+            </div> <!-- Close first desktop col-->
 
-            <section class="container flex-col">
-                <label for="group-input" class="input-label">Number of People</label>
-                <input type="number" class="input group-input" placeholder="0">
-            </section>
-        </div> <!-- Close first desktop col-->
-
-        <div class="container-desktop-col"><!-- Container to create second columns in desktop layour-->
-            <section class="container output">
-                <div class="tip-amount flex-col">
-                    <div class="tip-amount">
-                        <div class="flex">
-                            <div class="tip-info">
-                                <h4 class="output-title">Tip Amount</h4>
-                                <p class="person">/ person</p>
-                            </div>
-                            <div class="tip-amount">
-                                <h2 class="output-data" id="output-data-id">$0.00</h2>
+            <div class="container-desktop-col"><!-- Container to create second columns in desktop layout-->
+                <section class="container output">
+                    <div class="flex-col">
+                        <div class="tip-amount">
+                            <div class="flex">
+                                <div class="tip-info">
+                                    <h4 class="output-title">Tip Amount</h4>
+                                    <p class="output-subtitle">/ person</p>
+                                </div>
+                                <div class="tip-amount">
+                                    <h2 class="output-data" id="output-data-tip">$0.00</h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="total-amount">
-                        <div class="flex mobile-total"> <!-- mobile-total class added to add margin-->
-                            <div class="total-info">
-                                <h4 class="output-title">Total</h4>
-                                <p class="person">/ person</p>
-                            </div>
-                            <div class="total-amount">
-                                <h2 class="output-data" id="output-data-id">$0.00</h2>
+                        <div class="total-amount">
+                            <div class="flex total">
+                                <div class="total-info">
+                                    <h4 class="output-title">Total</h4>
+                                    <p class="output-subtitle">/ person</p>
+                                </div>
+                                <div class="total-amount">
+                                    <h2 class="output-data" id="output-data-total">$0.00</h2>
+                                </div>
                             </div>
                         </div>
+                        <button class="reset-btn">RESET</button>
                     </div>
-                    <button class="reset-btn">RESET</button>
-                </div>
-            </section>
+                </section><!--Close output section-->
         </div> <!-- Close second desktop col-->
             
         </main>
-    </div> 
+    </div> <!--Close container-center-->
+    <script src="js/index.js"></script>
 </body>
 </html>
