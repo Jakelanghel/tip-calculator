@@ -34,6 +34,7 @@ Users should be able to:
 
 ### Links
 
+https://github.com/Jakelanghel/tip-calculator
 https://jakelanghel.github.io/tip-calculator/
 
 ## My process
